@@ -15,7 +15,7 @@ func Hash2File(store KVStore, hash []byte, path string, hp HashPool) []byte {
 		return nil
 	}
 
-	// 解码数据，假设数据是 JSON 格式
+	// 解码数据
 	var treeData map[string]interface{}
 	err = json.Unmarshal(data, &treeData)
 	if err != nil {
